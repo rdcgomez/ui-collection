@@ -1,3 +1,116 @@
+:root {
+  --fff: #fff;
+  --1e2: #1E2246;
+  --c2c: #C2C5E2;
+}
 *, html {
   margin: 0;
+  box-sizing: border-box;
+}
+main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+main > div {
+  padding: 0 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--1e2);
+}
+.button {
+  transition: all 0.3s;
+}
+.ui-1-16-22 .c-header__title {
+  font-family: 'Merriweather', serif;
+  font-size: 28px;
+  line-height: 40px;
+  margin: 0 0 36px;
+}
+.ui-1-16-22 .c-card-grid {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1054px;
+  margin: 0 auto 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.ui-1-16-22 .c-card-grid__job {
+  padding: 24px 20px;
+  background: var(--fff);
+  box-shadow: 0px 24px 44px rgba(180, 191, 225, 0.4);
+  border-radius: 16px;
+}
+.ui-1-16-22 .c-card-grid__top {
+  margin: 0 0 24px;
+}
+.ui-1-16-22 .c-card-grid__job-department {
+  padding: 0 0 0 16px;
+}
+.ui-1-16-22 .cta .button {
+  background: var(--fff);
+  border: 1px solid var(--c2c);
+  border-radius: 8px;
+  padding: 16px 25px;
+}
+.ui-1-16-22 .cta .button:hover {
+  background: var(--1e2);
+  color: var(--fff)
+}
+.ui-1-16-22 .c-wysiwyg {
+  max-width: 845px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 24px;
+}
+/* Utilities */
+.u-ta-c {
+  text-align: center;
+}
+.u-ta-l {
+  text-align: left;
+}
+.u-ta-r {
+  text-align: right;
+}
+.u-df {
+  display: flex;
+}
+.u-fd-c {
+  display: flex;
+  flex-direction: column;
+}
+.u-jc-c {
+  justify-content: center;
+}
+.u-jc-se {
+  justify-content: space-evenly;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  main > div {
+    padding: 0 80px;
+  }
+  .ui-1-16-22 .c-card-grid {
+    margin: 0 auto 61px;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  }
+  .ui-1-16-22 .c-header .c-header__title {
+    font-size: 32px;
+    margin: 0 0 72px;
+  }
+  .ui-1-16-22 .c-card-grid__job {
+    padding: 48px 40px;
+  }
+  .ui-1-16-22 .c-card-grid__top {
+    margin: 0 0 32px;
+  }
+  .ui-1-16-22 .cta .button {
+    padding: 16px 50px;
+  }
 }
