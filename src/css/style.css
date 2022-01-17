@@ -2,6 +2,12 @@
   --fff: #fff;
   --1e2: #1E2246;
   --c2c: #C2C5E2;
+  --fb8: #FB896B;
+  --fb6: #FB6B6B;
+  --f1a: #F1A864;
+  --fbd: #FBD36B;
+  --485: #485258;
+  --f27: #F27251;
 }
 *, html {
   margin: 0;
@@ -21,6 +27,11 @@ a {
   text-decoration: none;
   color: var(--1e2);
 }
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 .button {
   transition: all 0.3s;
 }
@@ -89,6 +100,81 @@ a {
 .u-jc-se {
   justify-content: space-evenly;
 }
+.u-ai-c {
+  align-items: center;
+}
+.u-grid {
+  display: grid;
+}
+
+.ui-1-18-22 .u-grid.footer {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+  font-family: 'Poppins', sans-serif;
+}
+.ui-1-18-22 .footer .wrapper {
+  padding: 72px 43px;
+  max-width: 439px;
+}
+.ui-1-18-22 .footer .wrapper h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.ui-1-18-22 .footer .wrapper a, 
+.ui-1-18-22 .footer .wrapper h4,
+.ui-1-18-22 .footer .wrapper p { color: var(--fff) }
+.ui-1-18-22 .footer .wrapper.search{ 
+  background-color: var(--fb8);
+  border-radius: 20px 0 0 0;
+}
+.ui-1-18-22 .c-logo-title {
+  margin: 0 0 16px;
+}
+.ui-1-18-22 .c-logo-title svg {
+  margin-right: 9px;
+}
+.ui-1-18-22 .footer .wrapper .nav .nav__link {
+  padding: 10px;
+  font-weight: 500;
+} 
+.ui-1-18-22 .footer .wrapper .nav .nav__link:hover {
+  background-color: var(--f27);
+} 
+.ui-1-18-22 .footer .wrapper.cro { 
+  background-color: var(--fb6);
+  border-radius: 0 20px 0 0;
+}
+.ui-1-18-22 .footer .wrapper.soc-med { background-color: var(--f1a) }
+.ui-1-18-22 .footer .wrapper.other { 
+  background-color: var(--fbd); 
+}
+.ui-1-18-22 .footer .wrapper.other .c-logo-title h4,
+.ui-1-18-22 .footer .wrapper.other .nav .nav__link a {
+  color: var(--485);
+} 
+.ui-1-18-22 .footer .wrapper.booking { 
+  background-color: var(--485);
+  border-radius: 0 0 20px 20px;
+  grid-column: span 2;
+  max-width: 100%;
+}
+.ui-1-18-22 .footer .wrapper.booking > div {
+  max-width: 408px;
+}
+.ui-1-18-22 .footer .wrapper.booking div > p {
+  margin: 0 0 32px;
+}
+.ui-1-18-22 .footer .wrapper .cta .button {
+  padding: 16px;
+  color: var(--485);
+  width: 100%;
+  max-width: max-content;
+  background-color: var(--fff);
+}
+.ui-1-18-22 .footer .wrapper .cta .button:hover {
+  background-color: var(--485);
+  color: var(--fff);
+  border: 1px solid var(--fff);
+}
 
 /* Media Queries */
 @media only screen and (min-width: 768px) {
@@ -112,5 +198,22 @@ a {
   }
   .ui-1-16-22 .cta .button {
     padding: 16px 50px;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .ui-1-18-22 .u-grid.footer {
+    grid-template-columns: repeat(3, minmax(250px, 1fr) );
+  }
+  .ui-1-18-22 .footer .wrapper.soc-med { 
+    border-radius: 0 20px 0 0;
+  }
+  .ui-1-18-22 .footer .wrapper.cro {
+    border-radius: 0;
+  }
+  .ui-1-18-22 .footer .wrapper.other {
+    border-radius: 0 0 0 20px;
+  }
+  .ui-1-18-22 .footer .wrapper.booking { 
+    border-radius: 0 0 20px 0;
   }
 }
